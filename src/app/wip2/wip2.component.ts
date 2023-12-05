@@ -3,7 +3,6 @@ import * as Handsontable from "handsontable";
 import { registerAllModules } from 'handsontable/registry';
 import { ChangeDetectorRef } from '@angular/core';
 import { HotTableComponent, HotTableRegisterer } from '@handsontable/angular';
-import { RowObject } from 'handsontable/common';
 
 registerAllModules();
 
