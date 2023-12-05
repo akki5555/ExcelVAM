@@ -1,0 +1,138 @@
+<mat-toolbar>
+    <span>Arch | Insurance</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+<div class="main-content">
+    <!-- Your main content goes here -->
+    <mat-list>
+        <mat-list-item>
+            <mat-icon>home</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <p class="account-name">Account Name: ABC Crop</p>
+            <p class="account-id">Account Id: 12345</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <p class="ml-100">WIP Id : 98765</p>
+            <p class="ml-60">WIP Date : 12/12/2023</p>
+            <p class="add-rows" (click)="addRow(0)">ADD ROWS</p>
+            <button class="edit-btt">Edit</button>
+        </mat-list-item>
+        <div class="container" style="margin-top: 5px;">
+            <div class="row">
+                <div class="col">
+                    <h4><b>WIP TOTALS</b></h4>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col">
+                    <p>Contract price</p>
+                </div>
+                <div class="col">
+                    <p>Bill to date</p>
+                </div>
+                <div class="col">
+                    <p>Cost to date</p>
+                </div>
+                <div class="col">
+                    <p>Cost to complete</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+    </mat-list>
+    <div class="container" style="margin-top: 5px;">
+        <div class="row">
+            <div class="col">
+                <button class="clear-btt" (click)="reset()">CLEAR</button>
+            </div>
+            <div class="col-2">
+                <p>Grand total</p>
+            </div>
+            <div class="col">
+                <input type="text" [(ngModel)]="totalContractPrice" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" [(ngModel)]="totalBilledToDate" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" [(ngModel)]="totalCostToDate" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" [(ngModel)]="totalCostToComplete" class="form-control" name="remark" maxlength="200" />
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 5px;">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-2">
+                <p>All Other Jobs</p>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 5px;">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-2">
+                <p>WIP sub total</p>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="remark" maxlength="200" />
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row job-details">
+            <div class="col-12">
+               <p>
+                Job Details
+               </p>
+            </div>          
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hot-table [settings]="hotSettings"  [hotId]="'myTable'">
+                </hot-table>
+            </div>          
+        </div>
+    </div>
+    <div class="container" style="position: absolute; bottom: 100px;right: 205px;">
+        <div class="row">
+            <div class="col-8">
+            </div>     
+            <div class="col">
+                <button class="save-cancel">Cancel</button>                
+            </div>   
+            <div class="col">
+                <button (click)="save()">Save</button>                    
+            </div>   
+        </div>
+    </div>
+</div>

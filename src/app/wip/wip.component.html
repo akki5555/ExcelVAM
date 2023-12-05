@@ -1,0 +1,77 @@
+<mat-toolbar>
+    <span>Arch | Insurance</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+  <div class="pt-100">
+    <div class="bt2">
+      <span>Home</span>
+    </div>
+    <div class="bt2">
+      <span>Account Name: ABC Corp</span>
+    </div>
+    <div class="wip">
+      <div class="wip-div">
+        <p>WIP Id: 98766</p>
+        <p class="a-rows" (click)="addRows()">ADD ROWS</p>
+        <button class="edit-btt">Edit</button>
+      </div>
+      <div class="wip-totals">
+        <div class="totals">
+          <b>WIP TOTALS</b>
+          <p class="ml-245">Contract price</p>
+          <p>Bill to date</p>
+          <p>Cost to date</p>
+          <p>Cost to complete</p>
+        </div>
+      </div>
+    </div>
+    <div class="grand-total">
+      <div>
+        <button (click)="reset()">Clear Details</button>
+      </div>
+      <div class="grand-text">
+        <p class="ml-245">Grand total</p>
+        <p>All Other Jobs</p>
+        <p>WIP sub total</p>
+      </div>
+      <div>
+        <input type="text"  [(ngModel)]="unitTotal" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+      </div>
+      <div>
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+      </div>
+      <div>
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+      </div>
+      <div>
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+        <input type="text" class="form-control" name="remark" maxlength="200" />
+      </div>
+    </div>
+    <div class="job-details">
+      <div class="details">
+        <p>Job Details</p>
+      </div>
+      <div>
+        <div class="add-icons">
+            <mat-icon (click)="remove(0)">remove_circle_outline</mat-icon>
+            <mat-icon (click)="addRows()">add_circle_outline</mat-icon>
+        </div>
+        <div class="add-icons">
+          <mat-icon (click)="remove(0)">remove_circle_outline</mat-icon>
+          <mat-icon (click)="addRows()">add_circle_outline</mat-icon>
+      </div>
+        <div class="hot-table">
+          <hot-table #hotTable [settings]="hotSettings" [hotId]="'myTable'"></hot-table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

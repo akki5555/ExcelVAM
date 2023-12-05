@@ -1,0 +1,62 @@
+.mat-toolbar {
+    background-color: rgb(51, 63, 72);
+    color: #FFF;
+}
+.main-content{
+    .account-name{
+        margin: 0;
+        font-size: 14px;
+    }
+    .account-id{
+        margin: 0 0px 0px 90px;
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .ml-100{
+        margin-left: 100px;
+    }
+    .ml-60{
+        margin-left: 60px;
+    }
+    .add-rows{
+        margin-left: 60px;
+        color: blue;
+        border-bottom: 1px solid;
+    }
+    .form-control{
+        width: 100px;
+    }
+    .job-details{
+        border: 1px solid;
+        margin: 0 auto;
+        background: blue;
+        color: white;
+        text-align: center;
+        p{
+            padding-top: 10px;
+        }
+    }
+    input{
+        font-size: 14px;
+    }
+
+    .edit-btt{
+        margin: 0 auto;
+        background: rgb(227, 200, 0);
+        width: 88px;
+        border-radius: 10px;
+    }
+
+    .clear-btt{
+        background: blue;
+        border-radius: 10px;
+        width: 100px;
+        height: 30px;
+        color: white;
+        position: absolute;
+        margin-top: 35px;
+}
+    }
+

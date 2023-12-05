@@ -1,0 +1,23 @@
+
+<div>
+    <hot-table #hotTable [settings]="hotSettings" ></hot-table>
+</div>
+<div class="controls">
+  <button (click)="save()">save</button>
+</div><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <label for="html">Total Unit</label><br>
+      <input type="number" class="form-control" [(ngModel)]="unitTotal" name="remark"  maxlength="200" />
+    </div>
+    <div class="col-sm">
+      <label for="html">Total Of Unit Cost</label><br>
+      <input type="text" class="form-control" [(ngModel)]="unitPriceTotal" name="remark"  maxlength="200" />
+    </div>
+    <div class="col-sm">
+      <label for="html">Total</label><br>
+     <input type="text" class="form-control" [(ngModel)]="zTotal" name="remark"  maxlength="200" />
+    </div>
+  </div>
+</div>

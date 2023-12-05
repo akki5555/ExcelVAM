@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { HandsonTableComponent } from './handson-table.component';
+
+describe('HandsonTableComponent', () => {
+  let component: HandsonTableComponent;
+  let fixture: ComponentFixture<HandsonTableComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ HandsonTableComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(HandsonTableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
